@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Warranty</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Login page -->
+    <string name="login_header">Login/Create Account</string>
+    <string name="login_sub_header">to view your warranty products</string>
+    <string name="login_mobile_number_hint">Enter Mobile No.</string>
+    <string name="login_connect_with">Or connect with</string>
+    <string name="login_google">Google</string>
+    <string name="login_facebook">Facebook</string>
+    <string name="login_terms1">By proceeding, you agree to eWarranty's</string>
+    <string name="login_terms2">Privacy Policy</string>
+    <string name="login_terms3">and</string>
+    <string name="login_terms4">Terms of Service</string>
+    <string name="login_personal">Personal</string>
+    <string name="login_shop">Shop</string>
+
+    <!-- Otp page -->
+    <string name="otp_header">Verify your Mobile Number</string>
+    <string name="otp_sub_header">Please enter the OTP sent to </string>
+    <string name="otp_hint">Enter OTP</string>
+    <string name="otp_auto_fetching">Auto fetching OTP sent via SMS</string>
+    <string name="otp_resend">Resend OTP</string>
+    <string name="otp_submit">SUBMIT</string>
+
+
+</resources>
