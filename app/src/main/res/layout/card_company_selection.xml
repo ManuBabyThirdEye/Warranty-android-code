@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    >
+
+    <ImageView
+        android:id="@+id/companyLogo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="@color/primaryTextColor"
+        android:layout_centerVertical="true"
+        android:src="@drawable/no_data_found" />
+
+    <TextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/companyLogo"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/primaryTextColor"
+        android:layout_marginLeft="10dp"
+        android:text="Company Name"
+        android:layout_centerVertical="true"
+        android:textSize="12dp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/whatsapp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/primaryTextColor"
+            android:src="@drawable/whatsapp" />
+        <ImageView
+            android:id="@+id/email"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/primaryTextColor"
+            android:src="@drawable/email" />
+
+        <ImageView
+            android:id="@+id/phone"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/primaryTextColor"
+            android:src="@drawable/call" />
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/innerBackground"
+        android:layout_alignParentBottom="true"
+        >
+
+    </RelativeLayout>
+
+</RelativeLayout>

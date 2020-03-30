@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scrollbarThumbHorizontal="@null"
+        android:scrollbarThumbVertical="@null">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/base"
+                android:background="@color/base">
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/primaryTextColor"
+                android:text="@string/add_card_product_category"
+                android:layout_marginLeft="5dp"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+
+        <Spinner
+            android:id="@+id/productCategory"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:paddingStart="20dp"
+            android:includeFontPadding="true"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="13dp"
+            android:gravity="left"
+            android:background="@drawable/edit_box_inactive_bk"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/base"
+                android:background="@color/base">
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/primaryTextColor"
+                android:text="@string/add_card_product_company"
+                android:layout_marginLeft="5dp"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/companyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edit_box_inactive_bk">
+            <TextView
+                android:id="@+id/company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/primaryTextColor"
+                android:layout_centerVertical="true"
+                android:paddingStart="20dp"
+                android:includeFontPadding="true">
+            </TextView>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/base"
+                android:background="@color/base">
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/primaryTextColor"
+                android:text="@string/add_card_product_name"
+                android:layout_marginLeft="5dp"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:textSize="13dp"
+            android:inputType="textCapSentences"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/primaryTextColor"
+            android:paddingStart="20dp"
+            android:includeFontPadding="true"
+            android:background="@drawable/edit_box_inactive_bk">
+        </EditText>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/base"
+                android:background="@color/base">
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/primaryTextColor"
+                android:text="@string/add_card_product_id"
+                android:layout_marginLeft="5dp"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/productId"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:textSize="13dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/primaryTextColor"
+            android:inputType="textCapCharacters"
+            android:paddingStart="20dp"
+            android:includeFontPadding="true"
+            android:background="@drawable/edit_box_inactive_bk">
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/base"
+                android:background="@color/base">
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/primaryTextColor"
+                android:text="@string/add_card_product_other"
+                android:layout_marginLeft="5dp"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/productOther"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:textSize="13dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/primaryTextColor"
+            android:paddingStart="20dp"
+            android:layout_marginBottom="80dp"
+            android:includeFontPadding="true"
+            android:inputType="textCapSentences"
+            android:background="@drawable/edit_box_inactive_bk">
+        </EditText>
+
+    </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/forwardFromProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/active_button"
+        android:src="@drawable/ic_arrow_forward"
+        android:scaleType="fitCenter"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

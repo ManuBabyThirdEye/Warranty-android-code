@@ -4,12 +4,14 @@
 
     <!-- Login page -->
     <string name="login_header">Login/Create Account</string>
+    <string name="login_header_only_phone">Enter Your Phone Number</string>
     <string name="login_sub_header">to view your warranty products</string>
+    <string name="login_sub_header_only_phone">It will help us to improve the services</string>
     <string name="login_mobile_number_hint">Enter Mobile No.</string>
     <string name="login_connect_with">Or connect with</string>
     <string name="login_google">Google</string>
     <string name="login_facebook">Facebook</string>
-    <string name="login_terms1">By proceeding, you agree to eWarranty's</string>
+    <string name="login_terms1">By proceeding, you agree to eWarranty</string>
     <string name="login_terms2">Privacy Policy</string>
     <string name="login_terms3">and</string>
     <string name="login_terms4">Terms of Service</string>
@@ -23,6 +25,143 @@
     <string name="otp_auto_fetching">Auto fetching OTP sent via SMS</string>
     <string name="otp_resend">Resend OTP</string>
     <string name="otp_submit">SUBMIT</string>
+
+    <!-- Home Activity page -->
+    <string name="home_no_card">No eWarranty card added to your account</string>
+    <string name="home_add_warranty">ADD eWarranty</string>
+    <string name="title_home">Home</string>
+    <string name="title_incident">Request</string>
+    <string name="title_category">Category</string>
+    <string name="title_settings">More</string>
+    <string name="title_more">More</string>
+    <string name="title_select_category">Select Category</string>
+
+
+    <!-- Category Activity page -->
+    <string name="category_all">All Category</string>
+    <string name="category_electronics">Electronics</string>
+    <string name="category_tv_appliances">Home Appliances</string>
+    <string name="category_home_furniture">Furniture</string>
+    <string name="category_sports">Sports</string>
+    <string name="category_unknown">Unknown</string>
+    <string name="category_custom_1">Custom 1</string>
+    <string name="category_custom_2">Custom 2</string>
+    <string name="category_custom_3">Custom 3</string>
+    <string name="category_update">Update Category</string>
+    <string name="category_kids">Toys &amp; Child Care</string>
+    <string name="category_jewels">Fashion &amp; Accessories</string>
+    <string name="category_card_pending">Pending</string>
+    <string name="category_card_active">Active</string>
+    <string name="category_card_expire_soon">Expire Soon</string>
+    <string name="category_card_expired">Expired</string>
+
+    <!-- Incident Activity page -->
+    <string name="home_no_incident">No Request</string>
+    <string name="home_add_incident">ADD Request</string>
+    <string name="home_incident_heading">My Request</string>
+    <string name="home_incident_you_have">You have</string>
+    <string name="home_incident_pending">pending incidents</string>
+    <string name="home_incident_completed">completed incidents</string>
+    <string name="home_incident_canceled">canceled incidents</string>
+    <string name="home_incident_pending_heading">Pending Request</string>
+    <string name="home_incident_completed_heading">Completed Request</string>
+    <string name="home_incident_canceled_heading">Canceled Request</string>
+    <string name="home_view_all"><u>View All\u00A0</u></string>
+    <string name="home_offer_for_you">Available Offers for you</string>
+    <string name="incident_goto_details">GOTO DETAILS</string>
+    <string name="home_no_offer_access_1">You do not have access to create offers</string>
+    <string name="home_no_offer_access_2">Please contact us to create offers</string>
+
+    <!-- Settings Activity page -->
+    <string name="settings_notification">Notification</string>
+    <string name="settings_share">Share and Earn</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_logout">Logout</string>
+    <string name="settings_contact_us">Contact Us</string>
+    <string name="settings_about_us">About Us</string>
+    <string name="settings_theme_lite">LITE</string>
+    <string name="settings_theme_dark">DARK</string>
+    <string name="settings_theme_auto">AUTO</string>
+
+    <!-- Notification Activity page -->
+    <string name="notification_header">Notification</string>
+    <string name="notification_no_data">No Notifications</string>
+    <string name="notification_delete">Delete</string>
+
+    <!-- Add Card QR Code Activity page -->
+    <string name="add_card_QR_heading">Scan your product warranty QR code</string>
+    <string name="add_card_no_qr">No Warranty QR Code</string>
+    <string name="add_card_heading">Create Warranty Card</string>
+    <string name="add_card_product_details_heading">Product Details</string>
+    <string name="add_card_bill_details_heading">Bill Details</string>
+    <string name="add_card_bill_image_heading">Bill Images *</string>
+    <string name="add_card_sharing_heading">Share Card With</string>
+    <string name="add_card_product_category">Product Category</string>
+    <string name="add_card_product_company">Company</string>
+    <string name="add_card_product_name">Product Name *</string>
+    <string name="add_card_product_id">Product Id</string>
+    <string name="add_card_product_other">Other Information</string>
+    <string name="add_card_bill_number">Bill Number</string>
+    <string name="add_card_bill_invoice">Bill Invoice</string>
+    <string name="add_card_bill_date">Billed Date(DD-MM-YYYY)</string>
+    <string name="add_card_warranty_period">Warranty Period</string>
+    <string name="add_card_shop_id">Shop Id</string>
+    <string name="add_card_shopName">Shop Name</string>
+    <string name="add_card_submit">SUBMIT</string>
+    <string name="add_card_loading_2">Your card is generating!!!</string>
+
+
+    <string name="photo_selection_text">Choose</string>
+    <string name="photo_cancel_text">CANCEL</string>
+    <string name="camara_selection_text">Take photo</string>
+    <string name="gallery_selection_text">Choose images</string>
+    <string name="years">Years</string>
+    <string name="months">Months</string>
+    <string name="days">days</string>
+    <string name="empty_card">There is no card saved. To add new card click on the "+" sign</string>
+    <string name="empty_offer">No offer found for this shop.</string>
+
+    <!-- Card Details Activity page -->
+    <string name="card_details_heading">Card Details</string>
+    <string name="product_details">Product Details</string>
+    <string name="Bill_shop_details">Bill Details</string>
+    <string name="bill_images">Images &amp; Share</string>
+    <string name="add_person">Add Person</string>
+
+    <!-- Raise Incident Activity page -->
+    <string name="raise_incident_header">Raise an Incident</string>
+    <string name="raise_incident_description">Description</string>
+    <string name="raise_incident_raise_to_company">Contact The Company</string>
+    <string name="raise_incident_image">Damaged Images</string>
+    <string name="raise_incident_loading_1">Take a Break!!!</string>
+    <string name="raise_incident_loading_2">Issue will raise soon</string>
+    <string name="raise_incident_complete">Issue Raised Successfully...</string>
+    <string name="raise_incident_failed">Failed To Raise The Issue...</string>
+    <string name="raise_incident_whatsapp">Whatsapp</string>
+    <string name="raise_incident_email">E-Mail</string>
+    <string name="raise_incident_phone">Phone</string>
+    <string name="raise_incident_no_card">Something went wrong while creating request, no warranty card added to this request</string>
+    <string name="raise_incident_no_company">You have not linked the company to the warranty card</string>
+    <string name="raise_incident_no_contact"> does not support any communication methods</string>
+    <string name="raise_incident_has_contact_1">You can contact </string>
+    <string name="raise_incident_has_contact_2"> by any of the below methods</string>
+    <string name="raise_incident_no_description">No description</string>
+    <string name="raise_incident_no_images">No Damaged Images</string>
+    <string name="incident_mark_complete">MARK COMPLETE</string>
+    <string name="incident_rate_incident">Rate this Request</string>
+    <string name="incident_rate_Description">Enter your comments</string>
+
+
+    <!-- Offer Activity page -->
+    <string name="offer_request_callback">REQUEST CALL BACK</string>
+
+    <!-- Company List Activity page -->
+    <string name="company_list_heading">Registered Companies</string>
+
+
+    <string name="no_shop_1">Are you new?</string>
+    <string name="no_shop_2">Please contact our team for access or create new shop</string>
 
 
 </resources>

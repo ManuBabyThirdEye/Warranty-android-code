@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:id="@+id/dateAndTime"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="10:00 AM"
+        android:gravity="center"
+        android:textColor="@color/secTextColor"
+        android:layout_marginRight="5dp"
+        android:textSize="11dp" />
+
+
+    <LinearLayout
+        android:id="@+id/flowLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dateAndTime"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/flowLine"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@drawable/dotted_line"
+            android:layout_marginBottom="5dp"
+            >
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/statusColor"
+            android:layout_width="25px"
+            android:layout_height="25px"
+            app:cardCornerRadius="12px"
+            >
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/workflowDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/flowLayout"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Incident registered"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/secTextColor"
+        android:layout_marginLeft="10dp"
+        android:textSize="11dp" />
+
+</RelativeLayout>

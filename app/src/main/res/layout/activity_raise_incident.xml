@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RaiseIncidentActivity">
+
+    <RelativeLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:translationZ="10dp"
+        android:background="@color/mainBackground">
+        <com.airbnb.lottie.LottieAnimationView
+            android:visibility="gone"
+            android:id="@+id/successLoader"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/success"
+            app:lottie_loop="false"
+            app:lottie_speed="1" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:visibility="gone"
+            android:id="@+id/failedLoader"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/failed"
+            app:lottie_loop="false"
+            app:lottie_speed="1" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/waitingLoader"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/waiting"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/issueStatusPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/raise_incident_loading_1"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                />
+            <TextView
+                android:id="@+id/issueStatusSec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/raise_incident_loading_2"
+                android:textColor="@color/secTextColor"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scrollbarThumbHorizontal="@null"
+        android:scrollbarThumbVertical="@null">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/back_button"
+                android:src="@drawable/ic_back"
+                android:tint="@color/primaryTextColor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/raise_incident_header"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginLeft="25dp"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/base"
+                    android:background="@color/base">
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/primaryTextColor"
+                    android:text="@string/raise_incident_description"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/textarea_inactive_bk"
+                android:gravity="start|left"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:includeFontPadding="true"
+                android:textSize="13dp"
+                android:ems="10"
+                android:inputType="textMultiLine|textCapSentences" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/base"
+                    android:background="@color/base">
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/primaryTextColor"
+                    android:text="@string/raise_incident_image"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imageGridView"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@android:layout/simple_list_item_1"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/raiseRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/active_button"
+        android:src="@drawable/ic_arrow_forward"
+        android:text="SUBMIT"
+        android:textColor="@color/white"
+        android:scaleType="fitCenter"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="period_type">
+        <item>@string/days</item>
+        <item>@string/months</item>
+        <item>@string/years</item>
+    </string-array>
+    <string-array name="product_category">
+        <item>@string/category_all</item>
+        <item>@string/category_electronics</item>
+        <item>@string/category_tv_appliances</item>
+        <item>@string/category_home_furniture</item>
+        <item>@string/category_sports</item>
+        <item>@string/category_kids</item>
+        <item>@string/category_jewels</item>
+        <item>@string/category_unknown</item>
+        <item>@string/category_custom_1</item>
+        <item>@string/category_custom_2</item>
+        <item>@string/category_custom_3</item>
+    </string-array>
+</resources>

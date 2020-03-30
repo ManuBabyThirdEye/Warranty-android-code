@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@color/primaryTextColor"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/english"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:textColor="@color/negPrimaryTextColor"
+        android:text="English" />
+
+    <TextView
+        android:id="@+id/malayalam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/negPrimaryTextColor"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:text="മലയാളം" />
+
+</LinearLayout>

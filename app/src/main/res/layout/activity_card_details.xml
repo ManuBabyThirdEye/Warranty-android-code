@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".carddetails.CardDetailsActivity"
+    >
+
+    <RelativeLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:translationZ="10dp"
+        android:background="@color/mainBackground">
+        <com.airbnb.lottie.LottieAnimationView
+            android:visibility="gone"
+            android:id="@+id/successLoader"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/success"
+            app:lottie_loop="false"
+            app:lottie_speed="1" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:visibility="gone"
+            android:id="@+id/failedLoader"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/failed"
+            app:lottie_loop="false"
+            app:lottie_speed="1" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/waitingLoader"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/waiting"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/statusPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/raise_incident_loading_1"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                />
+            <TextView
+                android:id="@+id/statusSec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_card_loading_2"
+                android:textColor="@color/secTextColor"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/back_button"
+                android:src="@drawable/ic_back"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:tint="@color/primaryTextColor" />
+
+            <TextView
+                android:id="@+id/incidentHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_details_heading"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto_regular"
+                />
+
+            <ImageButton
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/back_button"
+                android:src="@drawable/ic_edit"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:tint="@color/primaryTextColor" />
+
+            <ImageButton
+                android:id="@+id/close"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/back_button"
+                android:src="@drawable/ic_close"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:tint="@color/primaryTextColor" />
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/cardDetailView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTabLayout"
+                app:tabTextAppearance="@style/AppTabTextAppearance"
+                android:layout_gravity="top" >
+                <com.google.android.material.tabs.TabItem
+                    android:text="@string/product_details"/>
+                <com.google.android.material.tabs.TabItem
+                    android:text="@string/Bill_shop_details"/>
+                <com.google.android.material.tabs.TabItem
+                    android:text="@string/bill_images"/>
+            </com.google.android.material.tabs.TabLayout>
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/raiseRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="bottom|start"
+        android:background="@drawable/request_button"
+        android:src="@drawable/ic_arrow_forward"
+        android:text="Raise Request"
+        android:textColor="@color/white"
+        android:scaleType="fitCenter"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

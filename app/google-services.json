@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "970568559809",
+    "firebase_url": "https://ewarranty-eef08.firebaseio.com",
+    "project_id": "ewarranty-eef08",
+    "storage_bucket": "ewarranty-eef08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970568559809:android:b748b64ec3073e43163840",
+        "android_client_info": {
+          "package_name": "com.ewarranty.warranty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970568559809-25jf9vksd5gqbn5d54220l3it43b97uj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ewarranty.warranty",
+            "certificate_hash": "4ca3b19505e903bb391b02c6809db1a553e8a242"
+          }
+        },
+        {
+          "client_id": "970568559809-k5ahqq5uk10tf3p4kpb4epcu6olp4j7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXwHRuD0Sue7lKUc3RyV_MUb5dm0eLRG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970568559809-k5ahqq5uk10tf3p4kpb4epcu6olp4j7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

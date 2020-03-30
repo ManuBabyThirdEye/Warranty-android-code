@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/mainBackground"
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -15,22 +15,24 @@
         >
 
         <TextView
+            android:id="@+id/mainHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login_header"
-            android:textColor="@color/black"
+            android:textColor="@color/primaryTextColor"
             android:textSize="22dp"
             android:textStyle="bold"
             android:fontFamily="@font/roboto_regular"
             android:layout_marginTop="100dp"/>
 
         <TextView
+            android:id="@+id/subHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login_sub_header"
-            android:textColor="@color/black"
+            android:textColor="@color/secTextColor"
             android:fontFamily="@font/roboto_regular"
-            android:textSize="16dp" />
+            android:textSize="14dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,7 +41,7 @@
             android:layout_weight="100"
             android:orientation="horizontal">
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="70"
@@ -56,10 +58,10 @@
                     android:paddingLeft="5dp"
                     android:singleLine="true"
                     android:fontFamily="@font/roboto_regular"
-                    android:textColor="?attr/primaryTextColor"
-                    android:textColorHint="?attr/primaryTextColor"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="@color/primaryTextColor"
                     />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <ImageButton
                 android:id="@+id/loginButton"
@@ -67,17 +69,18 @@
                 android:layout_height="45dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:background="?attr/disabledButton"
+                android:background="@drawable/disabled_button"
                 android:src="@drawable/ic_arrow_forward"
                 android:scaleType="fitCenter"/>
         </LinearLayout>
 
         <TextView
+            android:id="@+id/orConnectWith"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="@string/login_connect_with"
-            android:textColor="@color/black"
+            android:textColor="@color/primaryTextColor"
             android:fontFamily="@font/roboto_regular"
             android:textSize="12dp" />
 
@@ -112,13 +115,11 @@
                         android:text="@string/login_google"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/primaryTextColor"
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="15dp" />
                 </LinearLayout>
-
-
 
             </RelativeLayout>
             <RelativeLayout
@@ -147,7 +148,7 @@
                         android:gravity="center"
                         android:text="@string/login_facebook"
                         android:layout_marginLeft="10dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/primaryTextColor"
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/roboto_regular"
                         android:textSize="15dp" />
@@ -162,47 +163,49 @@
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:layout_gravity="bottom"
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="center_horizontal"
         android:layout_marginBottom="70dp"
         android:orientation="vertical">
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/login_terms1"
-                android:textColor="@color/black4"
+                android:textColor="@color/secTextColor"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            >
             <TextView
                 android:id="@+id/privacyPolicy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/login_terms2"
-                android:layout_marginLeft="3dp"
                 android:fontFamily="@font/roboto_regular"
                 android:textColor="@color/base"
                 android:textSize="12dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:text="@string/login_terms3"
                 android:fontFamily="@font/roboto_regular"
-                android:textColor="@color/black4"
+                android:textColor="@color/secTextColor"
                 android:textSize="12dp" />
             <TextView
                 android:id="@+id/termsOfService"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp"
                 android:text="@string/login_terms4"
                 android:fontFamily="@font/roboto_regular"
                 android:textColor="@color/base"
@@ -213,6 +216,7 @@
     </LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/accountSelectionLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
@@ -260,4 +264,4 @@
             />
     </RelativeLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

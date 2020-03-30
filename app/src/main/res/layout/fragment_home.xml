@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    >
+    <Spinner
+        android:id="@+id/shopListSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerVertical="true"
+        android:paddingStart="20dp"
+        android:includeFontPadding="true"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="12dp"
+        android:gravity="left"
+        android:translationZ="10dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/custView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/paidOfferViewPagerNew"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:backgroundTint="@color/innerBackground"
+                        android:background="@color/innerBackground"
+                        android:visibility="visible">
+
+                    </androidx.viewpager.widget.ViewPager>
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/paidOfferTabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabBackground="@drawable/tab_selector"
+                        android:background="@android:color/transparent"
+                        app:tabGravity="center"
+                        android:layout_alignParentBottom="true"
+                        app:tabIndicatorHeight="0dp"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/offerForYouText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/home_offer_for_you"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/completedImageView"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/offerForYouLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="65dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/shopView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="300dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_no_offer_access_1"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_no_offer_access_2"
+                    android:textColor="@color/secTextColor"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

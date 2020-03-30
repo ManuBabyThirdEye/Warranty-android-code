@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="60dp"
+        android:scrollbarThumbHorizontal="@null"
+        android:scrollbarThumbVertical="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="@color/white3"
+                    app:cardCornerRadius="49dp">
+
+                    <ImageView
+                        android:id="@+id/profilePic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/primaryTextColor"
+                        android:src="@drawable/ic_person" />
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="NO NAME"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/phoneNumberOrEmailId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="no more details"
+                        android:textColor="@color/secTextColor"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/gotoIncident"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_with_corner_radius"
+                android:gravity="center_vertical"
+                android:paddingRight="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="35dp"
+                    android:background="@color/base"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/incidentImage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    app:srcCompat="@drawable/request" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/incidentImage"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/title_incident"
+                    android:textColor="@color/secTextColor"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/incidentBlock"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginRight="5dp"
+                    android:backgroundTint="@color/red"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    app:cardCornerRadius="13dp">
+
+                    <TextView
+                        android:id="@+id/incidentCountCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="4"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/gotoNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_with_corner_radius"
+                android:gravity="center_vertical"
+                android:paddingTop="7dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="7dp">
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="35dp"
+                    android:background="@color/base"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/notificationImage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    app:srcCompat="@drawable/notification" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/notificationImage"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/settings_notification"
+                    android:textColor="@color/secTextColor"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/notificationBlock"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/red"
+                    app:cardCornerRadius="13dp">
+
+                    <TextView
+                        android:id="@+id/notificationCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="45"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/gotoShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_with_corner_radius"
+                android:gravity="center_vertical"
+                android:paddingTop="7dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="7dp">
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="25dp"
+                    android:background="@color/base"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/shareImage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    app:srcCompat="@drawable/share" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/shareImage"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/settings_share"
+                    android:textColor="@color/secTextColor"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/changeLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_with_corner_radius"
+                android:gravity="center_vertical"
+                android:paddingTop="7dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="7dp">
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="25dp"
+                    android:background="@color/base"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/langImage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    app:srcCompat="@drawable/language" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/langImage"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/settings_language"
+                    android:textColor="@color/secTextColor"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/currentLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="ENG"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/changeTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_with_corner_radius"
+                android:gravity="center_vertical"
+                android:paddingTop="7dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="7dp">
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="25dp"
+                    android:background="@color/base"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/themeImage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    app:srcCompat="@drawable/theme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/themeImage"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/settings_theme"
+                    android:textColor="@color/secTextColor"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/currentTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="LITE"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_with_corner_radius"
+                android:gravity="center_vertical"
+                android:paddingTop="7dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="7dp">
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="25dp"
+                    android:background="@color/base"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/logoutImage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    app:srcCompat="@drawable/logout" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/logoutImage"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/settings_logout"
+                    android:textColor="@color/secTextColor"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white5">
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/gotoContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_with_corner_radius"
+                android:gravity="center_vertical"
+                android:paddingTop="7dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="7dp">
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="25dp"
+                    android:background="@color/base"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/contactImage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    app:srcCompat="@drawable/contact" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/contactImage"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/settings_contact_us"
+                    android:textColor="@color/secTextColor"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/gotoAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_with_corner_radius"
+                android:gravity="center_vertical"
+                android:paddingTop="7dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="7dp">
+
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="25dp"
+                    android:background="@color/base"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/aboutImage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    app:srcCompat="@drawable/about" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/aboutImage"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/settings_about_us"
+                    android:textColor="@color/secTextColor"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

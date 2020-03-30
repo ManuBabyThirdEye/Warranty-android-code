@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimaryLite">#FFFFFF</color>
-    <color name="colorPrimaryDarkLite">#FFFFFF</color>
-    <color name="colorAccentLite">#2196f3</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#2196f3</color>
 
-    <color name="colorPrimaryNight">#000000</color>
-    <color name="colorPrimaryDarkNight">#000000</color>
-    <color name="colorAccentNight">#2196f3</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="negPrimaryTextColor">#f5f5f5</color>
+    <color name="secTextColor">#424242</color>
+    <color name="mainBackground">#fafafa</color>
+    <color name="innerBackground">#f5f5f5</color>
+    <color name="negBackground">#fafafa</color>
+    <color name="unread">#f5f7e0</color>
 
     <color name="white">#FFFFFF</color>
     <color name="white1">#fafafa</color>
@@ -14,6 +18,8 @@
     <color name="white3">#e0e0e0</color>
     <color name="white4">#bdbdbd</color>
     <color name="white5">#9e9e9e</color>
+    <color name="transparent_selection">#99000000</color>
+
 
     <color name="black4">#757575</color>
     <color name="black3">#616161</color>
@@ -24,5 +30,25 @@
     <color name="base">#2196f3</color>
     <color name="base1">#03a9f4</color>
     <color name="baseLite">#b6def0</color>
+
+    <color name="red">#f44336</color>
+    <color name="pending">#ff9800</color>
+    <color name="completed">#009688</color>
+    <color name="pending_dark">#ac8100</color>
+
+
+
+    <color name="active_start">#00bcd4</color>
+    <color name="active_end">#000000</color>
+
+
+    <color name="expired_start">#e91e63</color>
+    <color name="expired_end">#000000</color>
+
+    <color name="editText_start">#e0e0e0</color>
+    <color name="editText_end">#f5f5f5</color>
+
+    <color name="whatsapp_green">#4c9634</color>
+
 
 </resources>

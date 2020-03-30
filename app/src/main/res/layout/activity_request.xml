@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:background="@color/mainBackground">
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/noIncidentCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="5dp"
+        android:elevation="8dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0px"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:cardPreventCornerOverlap="false"
+        android:backgroundTint="@color/innerBackground"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/home_no_incident"
+                android:gravity="center"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/no_data_found" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/incidentCountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/back_button"
+            android:src="@drawable/ic_back"
+            android:tint="@color/primaryTextColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_incident_heading"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/pendingIncidentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@drawable/border_with_corner_radius"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/pending">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_incident_you_have"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/roboto_regular"/>
+                    <TextView
+                        android:id="@+id/pendingIncidentCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/primaryTextColor"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/roboto_regular"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_incident_pending"
+                        android:textColor="@color/primaryTextColor"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/roboto_regular"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp">
+
+
+                <ImageView
+                    android:id="@+id/pendingImageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    app:srcCompat="@drawable/ic_pending" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/home_incident_pending_heading"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/pendingImageView"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/gotoPendingIncident"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:tint="@color/base"
+                    app:srcCompat="@drawable/ic_arrow_forward" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/completedIncidentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@drawable/border_with_corner_radius"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/completed">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_incident_you_have"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/roboto_regular"/>
+                    <TextView
+                        android:id="@+id/completedIncidentCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/primaryTextColor"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/roboto_regular"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_incident_completed"
+                        android:textColor="@color/primaryTextColor"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/roboto_regular"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp">
+
+
+                <ImageView
+                    android:id="@+id/completedImageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    app:srcCompat="@drawable/ic_completed" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/home_incident_completed_heading"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/completedImageView"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/gotoCompletedIncident"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:tint="@color/base"
+                    app:srcCompat="@drawable/ic_arrow_forward" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/canceledIncidentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@drawable/border_with_corner_radius"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/red">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_incident_you_have"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/roboto_regular"/>
+                    <TextView
+                        android:id="@+id/canceledIncidentCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/primaryTextColor"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/roboto_regular"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_incident_canceled"
+                        android:textColor="@color/primaryTextColor"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/roboto_regular"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp">
+
+
+                <ImageView
+                    android:id="@+id/canceledImageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    app:srcCompat="@drawable/ic_rejected" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/home_incident_canceled_heading"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/canceledImageView"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/gotoCanceledIncident"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:tint="@color/base"
+                    app:srcCompat="@drawable/ic_arrow_forward" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
